@@ -1,0 +1,76 @@
+.input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 0.4rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: transform 0.2s ease;
+  position: relative;
+  background-color: color-mix(in srgb, #fff 20%, transparent);
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid var(--main-color);
+  font-size: 1rem;
+  color: #333;
+  transition: box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.search-bar input:focus {
+  background: #fff;
+  border: 1px solid var(--main-color);
+  box-shadow: 0 2px 10px var(--main-color);
+}
+
+.search-bar button {
+  background: linear-gradient(135deg, #0078ff, #00b8ff);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.search-bar button:hover {
+  background: linear-gradient(135deg, #005fcc, #00a3e0);
+  transform: scale(1.05);
+}
+
+.suggestions {
+  position: absolute;
+  background: var(--bg-color);
+  color: var(--text-color);
+  top: 100%;
+  list-style: none;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+}
+.suggestion-item {
+  background-color: #333;
+  padding: 0.8rem;
+  cursor: pointer;
+  border-bottom: 1px solid #ddd;
+}

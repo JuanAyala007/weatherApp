@@ -1,0 +1,53 @@
+import DarkMode from "../DarkMode/DarkMode";
+import Search from "../Search/Search";
+import "./Header.css";
+const Header = ({ setCity }) => {
+  return (
+    <div className="header-container">
+      <header className="header">
+        <div className="header-title">
+          <span className="header-title-ico">
+            <svg
+              viewBox="0 0 1024 1024"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#000000"
+            >
+              <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M512 512m-277.333333 0a277.333333 277.333333 0 1 0 554.666666 0 277.333333 277.333333 0 1 0-554.666666 0Z"
+                  fill="#EFD358"
+                ></path>
+                <path
+                  d="M85.333333 533.333333H42.666667a21.333333 21.333333 0 1 1 0-42.666666h42.666666a21.333333 21.333333 0 1 1 0 42.666666zM209.066667 230.4a21.269333 21.269333 0 0 1-15.082667-6.250667l-29.866667-29.866666a21.333333 21.333333 0 1 1 30.165334-30.165334l29.866666 29.866667A21.333333 21.333333 0 0 1 209.066667 230.4zM512 106.666667a21.333333 21.333333 0 0 1-21.333333-21.333334V42.666667a21.333333 21.333333 0 1 1 42.666666 0v42.666666a21.333333 21.333333 0 0 1-21.333333 21.333334zM814.933333 230.4a21.333333 21.333333 0 0 1-15.082666-36.416l29.866666-29.866667a21.333333 21.333333 0 1 1 30.165334 30.165334l-29.866667 29.866666a21.269333 21.269333 0 0 1-15.082667 6.250667zM981.333333 533.333333h-42.666666a21.333333 21.333333 0 1 1 0-42.666666h42.666666a21.333333 21.333333 0 1 1 0 42.666666z"
+                  fill="#EFD358"
+                ></path>
+                <path
+                  d="M810.666667 1002.666667H213.333333c-105.856 0-192-86.122667-192-192s86.144-192 192-192c17.322667 0 34.624 2.453333 51.669334 7.338666A256.128 256.128 0 0 1 490.666667 490.666667a255.786667 255.786667 0 0 1 232.533333 149.290666A189.653333 189.653333 0 0 1 810.666667 618.666667c105.856 0 192 86.122667 192 192s-86.144 192-192 192z"
+                  fill="#E0E0E0"
+                ></path>
+              </g>
+            </svg>
+          </span>
+          <h1 className="header-title-text">WeatherApp</h1>
+        </div>
+
+        <div className="header-input">
+          <Search setCity={setCity} />
+        </div>
+
+        <div>
+          <DarkMode />
+        </div>
+      </header>
+    </div>
+  );
+};
+
+export default Header;

@@ -1,0 +1,37 @@
+:root {
+  --bg-color: #6047e9;
+  --bg-card: #ffffff;
+  --text-color: #fff;
+  --main-color: #6047e9;
+  --white-color: #fdfdfd;
+  --icon-color: #2dbdef;
+}
+[datatheme="dark"] {
+  --bg-color: #171717;
+  --bg-card: rgba(255, 255, 255, 0.15);
+  --text-color: #fdfdfd;
+  --main-color: #6055d8;
+  --icon-color: #2dbdef;
+}
+[datatheme="dark"] .bxs-moon {
+  display: none;
+}
+[datatheme="light"] .bxs-sun {
+  display: none;
+}
+
+body {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+}
+html {
+  overflow-x: hidden;
+}
