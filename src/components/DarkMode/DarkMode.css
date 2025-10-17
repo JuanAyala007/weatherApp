@@ -17,5 +17,5 @@
   height: 0;
 }
 #switch svg {
-  fill: var(--white-color);
+  fill: var(--text-color);
 }

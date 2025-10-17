@@ -21,7 +21,7 @@ body {
 .weatherCard {
   position: relative;
   width: 100%;
-  background-color: color-mix(in srgb, #fff 20%, transparent);
+  background-color: var(--bg-card);
   border-radius: 20px;
   padding: 1rem;
   transition: all 0.3s ease;
@@ -45,7 +45,7 @@ body {
   height: 25px;
 }
 
-.location span {
+.location .location-name span {
   opacity: 0.8;
   font-size: 15px;
 }
@@ -167,7 +167,7 @@ body {
 
 /* 🌡️ Cada ítem */
 .weather-item {
-  background-color: color-mix(in srgb, #fff 10%, transparent);
+  background-color: var(--bg-card);
   border-radius: 16px;
   display: flex;
   flex-direction: column;
@@ -193,7 +193,8 @@ body {
 /* 🔤 Texto del nombre y valor */
 .weather-name {
   font-size: 0.9rem;
-  color: color-mix(in srgb, var(--text-color) 80%, transparent);
+  color: var(--text-color);
+  opacity: 0.8;
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 4px;
@@ -224,7 +225,7 @@ body {
 .hour-container {
   width: 100%;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--bg-card);
   border-radius: 16px;
   padding: 0.5rem;
   overflow: hidden;
@@ -246,12 +247,12 @@ body {
   position: absolute;
   top: 60%;
   transform: translateY(-50%);
-  background: linear-gradient(145deg, #d8d7e0, #e0e0f1);
+  background: var(--icon-color);
   display: none;
   align-items: center;
   justify-content: center;
   border: none;
-  color: #5a55d6;
+  color: #fff;
   font-size: 2rem;
   font-weight: bold;
   cursor: pointer;
@@ -277,7 +278,7 @@ body {
 }
 .hour-container-title {
   margin-bottom: 0.5rem;
-  color: #fff;
+  color: var(--text-color);
   display: flex;
   align-items: center;
   gap: 5px;
@@ -285,7 +286,7 @@ body {
 .hourly-container .hour-card {
   flex: 0 0 50px;
   scroll-snap-align: center;
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--bg-card);
   border-radius: 10px;
   backdrop-filter: blur(12px);
   text-align: center;
@@ -295,6 +296,7 @@ body {
   padding: 0.5rem 0;
 }
 .hour-time {
+  color: var(--text-color);
   font-weight: 600;
   font-size: 12px;
   margin-bottom: 5px;
@@ -306,6 +308,7 @@ body {
 }
 
 .hour-temp {
+  color: var(--text-color);
   font-weight: 600;
   font-size: 12px;
 }
@@ -322,7 +325,7 @@ body {
   width: 100%;
   border-radius: 16px;
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: var(--bg-card);
 }
 .dayly-container {
   width: 100%;
@@ -336,12 +339,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
+  background: var(--bg-card);
+  backdrop-filter: blur(15px);
   border-radius: 16px;
   padding: 0 0.8rem;
-  color: #fff;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -361,6 +362,7 @@ body {
   font-weight: 600;
   font-size: 12px;
   text-transform: capitalize;
+  color: var(--text-color);
 }
 
 /* Temperaturas */
@@ -374,6 +376,9 @@ body {
 .day-card .day-min {
   font-size: 14px;
 }
+.tempTeam {
+  color: var(--text-color);
+}
 
 .day-card .day-max {
   color: #ffcc70; /* tono cálido */
@@ -386,7 +391,8 @@ body {
 /* Humedad */
 .day-card .day-humidity {
   font-size: 0.8rem;
-  color: #d0e7ff;
+  color: var(--text-color);
+  opacity: 0.7;
 }
 
 .atributions {
